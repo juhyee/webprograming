@@ -4,8 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <title>14-8</title>
-    <style>
-        * {box-sizing: border-box; margin: 0; padding: 0;}
+    <style>  
+      * {box-sizing: border-box; margin: 0; padding: 0;}
+        body {font-family: Arial; padding: 10px; background-color: #f1f1f1;}
+        .header {padding: 30px; text-align: center; background: #fff;}
+        .header h1 {font-size: 50px;}
+        .topnav {overflow: hidden; background-color: #333;}
+        .topnav a {float: left; display: block;color: #f2f2f2; text-align: center; padding: 14px 16px; text-decoration: none;}
+        .topnav a.on {background-color: #ddd; color: #000;}
+        .topnav a:hover {background-color: #ddd; color: #000;}
+        
+        @media screen and (max-width:400px) {
+            .topnav a {float: none; width: 100%;}
+        }
+        
         ul {list-style-type: none;}
         body {font-family: "맑은 고딕", "돋움"; font-size: 100%;}
         [class*="c"] {float: left;padding: 10px;}
@@ -51,6 +63,23 @@
     </style>
 </head>
 <body>
+  <div class="header">
+    <h1>My website</h1>
+    <p>Resize the browser window to see the effect.</p>
+  </div>
+  
+  <div class="topnav">
+    <a href="./index.html">My website</a>
+    <a href="./viewport_01.html">viewport-01</a>
+    <a href="./viewport_02.html">viewport-02</a>
+    <a href="./viewport_03.html">viewport-03</a>
+    <a href="./viewport_04.html">viewport-04</a>
+    <a href="./mediaquery_01.html" >mediaquery-01</a>
+    <a href="./mediaquery_02.html">mediaquery-02</a>
+    <a href="./mediaquery_03.html"class="on">mediaquery-03</a>
+    <a href="#" style="float: right;">Link</a>
+  </div>
+  
   <header class="c_12">
     <h1>루바토의 사진 아카데미</h1>
   </header>

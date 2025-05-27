@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14-1</title>
+    <style>
+        * {box-sizing: border-box; margin: 0; padding: 0;}
+        body {font-family: Arial; padding: 10px; background-color: #f1f1f1;}
+        .header {padding: 30px; text-align: center; background: #fff;}
+        .header h1 {font-size: 50px;}
+        .topnav {overflow: hidden; background-color: #333;}
+        .topnav a {float: left; display: block;color: #f2f2f2; text-align: center; padding: 14px 16px; text-decoration: none;}
+        .topnav a.on {background-color: #ddd; color: #000;}
+        .topnav a:hover {background-color: #ddd; color: #000;}
+        @media screen and (max-width:400px) {
+            .topnav a {float: none; width: 100%;}
+        }
+
+        body {font-size: 200%;}
+        #a {font-size: 150%;}
+        #b {font-size: 2em;}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>My website</h1>
+        <p>Resize the browser window to see the effect.</p>
+    </div>
+    
+    <div class="topnav">
+        <a href="./index.html">My website</a>
+        <a href="./viewport_01.html" class="on">viewport-01</a>
+        <a href="./viewport_02.html">viewport-02</a>
+        <a href="./viewport_03.html">viewport-03</a>
+        <a href="./viewport_04.html">viewport-04</a>
+        <a href="./mediaquery_01.html">mediaquery-01</a>
+        <a href="./mediaquery_02.html">mediaquery-02</a>
+        <a href="./mediaquery_03.html">mediaquery-03</a>
+        <a href="#" style="float: right;">Link</a>
+    </div>
+    Hello! I'm Genius!!!
+    <div id="a">Hello! I'm Genius!!!!</div>
+    <div id="b">Hello! I'm Genius!!!!</div>
+</body>
+</html>
