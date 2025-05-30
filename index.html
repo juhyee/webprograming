@@ -20,7 +20,7 @@
 
     .quick {margin-top: 100px;}
     .quickMenu{margin-top: 100px; display: flex; justify-content: center; flex-wrap: wrap; gap: 50px;}
-    .quickMenu li {overflow: hidden; position: relative; position: relative; width: 300px; height: 300px; border-radius: 50%; overflow: hidden;}
+    .quickMenu li {overflow: hidden; position: relative; position: relative; width: 300px; height: 300px; border-radius: 50%; overflow: hidden; border: 10px solid transparent;}
     .quickMenu li img {display: block; width: 100%; height: 100%;}
     .quickMenu li::after {display: none; content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 100%;background-color: #000; opacity: 0.6;}
     .quickMenu li:hover span, .quickMenu li:hover::after {display: flex;}
@@ -37,7 +37,7 @@
       
         .quick {margin-top: 7.81vw;}
         .quickMenu{margin-top: 7.81vw; gap: 3.91vw;}
-        .quickMenu li {width: 39.06vw; height:39.06vw;}
+        .quickMenu li {width: 39.06vw; height:39.06vw; border-width:  1.78vw;}
         .quickMenu li:hover {border: 1.78vw solid #b7dbff;}
         .quickMenu li span {font-size: 4.17vw;}
     }
@@ -48,13 +48,13 @@
     <div class="wrap">
         <header class="header" id="header">
             <div class="headerInner inner">
-                <h1 class="logo"><a href="#"></a></h1>
+                <h1 class="logo"><a href="./index.html"></a></h1>
                 <ul class="menu">
-                    <li><a href="#">두부 소개</a></li>
-                    <li><a href="#">스피츠 소개</a></li>
-                    <li><a href="#">두부와의 추억</a></li>
-                    <li><a href="#">두부 최애</a></li>
-                    <li><a href="#">두부의 일상</a></li>
+                    <li><a href="./intro.html">두부 소개</a></li>
+                    <li><a href="./spitz.html">스피츠 소개</a></li>
+                    <li><a href="./gallery01.html">두부와의 추억</a></li>
+                    <li><a href="./item.html">두부 최애</a></li>
+                    <li><a href="./daily.html">두부의 일상</a></li>
                 </ul>
             </div>
         </header>
@@ -66,15 +66,15 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <img src="./img/slide01.jpeg">
-                                <a href="#" class="visualBtn">바로가기 ></a>
+                                <a href="./intro.html" class="visualBtn">바로가기 ></a>
                             </div>
                             <div class="swiper-slide">
                                 <img src="./img/slide02.jpeg">
-                                <a href="#" class="visualBtn">바로가기 ></a>
+                                <a href="./gallery01.html" class="visualBtn">바로가기 ></a>
                             </div>
                             <div class="swiper-slide">
                                 <img src="./img/slide03.jpeg">
-                                <a href="#" class="visualBtn">바로가기 ></a>
+                                <a href="./item.html" class="visualBtn">바로가기 ></a>
                             </div>
 
                         </div>
@@ -92,27 +92,27 @@
                 <div class="quickInner inner">
                     <ul class="quickMenu">
                         <li>
-                            <a href="#"><img src="./img/quick.jpeg">
+                            <a href="./intro.html"><img src="./img/quick.jpeg">
                                 <span>두부 소개</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#"><img src="./img/quick02.jpeg">
+                            <a href="./spitz.html"><img src="./img/quick02.jpeg">
                                 <span>스피츠 소개</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#"><img src="./img/quick03.png">
+                            <a href="./gallery01.html"><img src="./img/quick03.png">
                                 <span>두부와의 추억</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#"><img src="./img/quick04.png">
+                            <a href="./item.html"><img src="./img/quick04.png">
                                 <span>두부 최애</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#"><img src="./img/quick05.png">
+                            <a href="./daily.html"><img src="./img/quick05.png">
                                 <span>두부의 일상</span>
                             </a>
                         </li>
@@ -123,7 +123,7 @@
         
         <footer class="footer">
             <div class="footerInner inner">
-                <h2 class="footerLogo"><a href="#"></a></h2>
+                <h2 class="footerLogo"><a href="./index.html"></a></h2>
                 <div class="footerText">
                     <div class="info">
                         <p>두부 주소: 대한민국 경기도 양주시 고읍동</p>
@@ -135,20 +135,7 @@
         </footer>
     </div>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<!-- Initialize Swiper -->
-<script>
-    var swiper = new Swiper(".visualSwiper", {
-        pagination: {
-            el: ".swiper-pagination",
-        },
-        loop: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
-    });
-</script>
+<script src="./js/script.js"></script>
 </body>
 
 </html>

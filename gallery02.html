@@ -36,9 +36,9 @@
                 <ul class="menu">
                     <li><a href="./intro.html">두부 소개</a></li>
                     <li><a href="./spitz.html">스피츠 소개</a></li>
-                    <li><a href="./gallery.html" class="on">두부와의 추억</a></li>
-                    <li><a href="#">두부 최애</a></li>
-                    <li><a href="#">두부의 일상</a></li>
+                    <li><a href="./gallery01.html" class="on">두부와의 추억</a></li>
+                    <li><a href="./item.html">두부 최애</a></li>
+                    <li><a href="./daily.html">두부의 일상</a></li>
                 </ul>
             </div>
         </header>
@@ -71,7 +71,7 @@
 
         <footer class="footer">
             <div class="footerInner inner">
-                <h2 class="footerLogo"><a href="#"></a></h2>
+                <h2 class="footerLogo"><a href="./index.html"></a></h2>
                 <div class="footerText">
                     <div class="info">
                         <p>두부 주소: 대한민국 경기도 양주시 고읍동</p>
@@ -83,32 +83,7 @@
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const bigImage = document.querySelector(".galleryBig");
-            const thumbnails = document.querySelectorAll(".galleryList img");
-
-            thumbnails.forEach(function (thumb) {
-                thumb.addEventListener("click", function () {
-                    const newSrc = this.getAttribute("src");
-                    bigImage.setAttribute("src", newSrc);
-                });
-            });
-        });
-
-        var swiper = new Swiper(".visualSwiper", {
-            pagination: {
-                el: ".swiper-pagination",
-            },
-            loop: true,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
-        });
-    </script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
