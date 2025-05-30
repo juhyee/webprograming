@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/common.css">
+    <title>두부의 하루</title>
+    <style>
+        .dayBox {position: relative;display: flex;align-items: center;justify-content: space-between;margin-top: 100px;}
+        .dayTbl {overflow: hidden; position: relative;width: 500px;height: 500px; border-radius: 50%; background: url(./img/daily02.jpeg) 0 0 no-repeat;background-size: 100% auto; }
+        .dayTbl::after {content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #fff; border-radius: 50%; opacity: 0.7;}
+        .dayTbl>* {z-index: 2;}
+        .dayTbl .circle {position: relative; width: 100%;height: 500px;border-radius: 50%;border: 15px solid #3399fe;}
+        .dayTbl .circle .line {position: absolute;top: 0;left: 50%;margin-left: -1.5px;width: 3px;height: 240px;transform-origin: bottom;background-color: #3399fe;}
+        .dayTbl .circle .line01 {transform: rotate(90deg);}
+        .dayTbl .circle .line02 {transform: rotate(105deg);}
+        .dayTbl .circle .line03 {transform: rotate(120deg);}
+        .dayTbl .circle .line04 {transform: rotate(135deg);}
+        .dayTbl .circle .line05 {transform: rotate(240deg);}
+        .dayTbl .circle .line06 {transform: rotate(255deg);}
+        .dayTbl .circle .line07 {transform: rotate(285deg);}
+        .dayTbl .circle .line08 {transform: rotate(300deg);}
+        .dayTbl .circle .line09 {transform: rotate(330deg);}
+        .dayTbl .text {position: absolute; left: 50%;font-size: 2.2rem;font-weight: bold;}
+        .dayTbl .text01 {top: 23%;transform: translate(40%, 0);}
+        .dayTbl .text02 {top: 52.1%; transform: translate(457%, 0);}
+        .dayTbl .text03 {top: 63.1%; transform: translate(237%, 0) rotate(27deg);}
+        .dayTbl .text04 {top: 71.1%; transform: translate(367%, 0) rotate(38deg);}
+        .dayTbl .text05 {top: 75.1%; transform: translate(-75%, 0);}
+        .dayTbl .text06 {top: 62.6%; transform: translate(-533%, 0) rotate(-20deg);}
+        .dayTbl .text07 {top: 48.1%; transform: translate(-283%, 0);}
+        .dayTbl .text08 {top: 33.1%; transform: translate(-323%, 0) rotate(21deg);}
+        .dayTbl .text09 {top: 27.1%; transform: translate(-136%, 0) rotate(44deg);}
+        .dailyText {width: 720px;}
+        .dayBox .dailyText h4 {font-size: 2.4rem;color: #3399fe;}
+        .dayBox .dailyText p {margin-top: 10px;font-size: 2rem;word-break: keep-all;color: #333;}
+        .dayBox .dailyText p+h4 {margin-top: 10px;}
+        .weekTbl {overflow: hidden;margin: 100px auto 0;width: 100%;border-radius: 12px;border: 1px solid #adadad;border-collapse: collapse;}
+        .weekTbl tr {height: 120px;vertical-align: top;font-size: 2rem;}
+        .weekTbl td {position: relative;width: 100px;padding: 5px;}
+        .weekTbl tr.day {height: 40px;font-size: 20px;background-color: #b7dbff;text-align: center;font-weight: bold;line-height: 40px;}
+        .weekTbl .red {color: #ff0000;}
+        .weekTbl .blue {color: #0000ff;}
+        .weekTbl .event {display: inline-block;width: calc(100% - 10px);margin: 10px auto;text-align: center;padding: 4px 0;border-radius: 4px;background-color: #ffdaf3;font-size: 1.7rem; font-weight: bold;}
+        .weekTbl .event.event02 {position: absolute;top: 40px;left: 0;width: 200%;}
+        .weekTbl .event.event03 {position: absolute;top: 5px;left: 0;width: 300%;}
+        .subTxt {font-size: 1.6rem; text-align: right; color: #898989;}
+         @media screen and (max-width: 1280px) { 
+            .dayBox {display: block; margin-top: 7.81vw; padding: 0 4.34vw;}
+            .dayTbl {width: 100%; height: 91.25vw;}
+            .dayTbl .circle {position: relative; width: 100%;height: 100%;border-radius: 50%;border: 2.5vw solid #3399fe;}
+            .dayTbl .circle .line {margin-left: -0.36vw;width: 0.72vw;height: 50%;transform-origin: bottom;background-color: #3399fe;}
+            .dayTbl .text {font-size: 3.33vw;}
+            .dayTbl .text01 {top: 23%; transform: translate(40%, 0);}
+            .dayTbl .text02 {top: 53.1%; transform: translate(584%, 0);}
+            .dayTbl .text03 {top: 63.1%; transform: translate(301%, 0) rotate(27deg);}
+            .dayTbl .text04 {top: 71.1%; transform: translate(433%, 0) rotate(38deg);}
+            .dayTbl .text05 {top: 75.1%; transform: translate(-75%, 0);}
+            .dayTbl .text06 {top: 62.6%; transform: translate(-621%, 0) rotate(-20deg);}
+            .dayTbl .text07 {top: 48.1%; transform: translate(-346%, 0);}
+            .dayTbl .text08 {top: 33.1%; transform: translate(-393%, 0) rotate(21deg);}
+            .dayTbl .text09 {top: 27.1%; transform: translate(-152%, 0) rotate(44deg);}
+            .dailyText {width: 100%; margin-top: 7.81vw; text-align: center;}
+            .dayBox .dailyText h4 {font-size: 3.33vw;}
+            .dayBox .dailyText p {margin-top: 1.67vw;font-size: 2.50vw;}
+            .dayBox .dailyText p+h4 {margin-top: 1.67vw;}
+            .week {overflow-y: auto; padding-left: 4.34vw;}
+            .weekTbl {width: 150.33vw; margin: 7.81vw auto 0; border-radius: 2.00vw;}
+            .weekTbl tr {height: 13.00vw; font-size: 2.50vw;}
+            .weekTbl td { padding: 1.25vw; font-size: 2vw;}
+            .weekTbl tr.day {height: 3.33vw;font-size: 2vw;line-height: 3.33vw;}
+            .weekTbl .event {width: calc(100%);margin: 0.83vw auto;padding: 0.67vw 0;border-radius: 0.67vw; font-size: 2.2vw;}
+            .weekTbl .event.event02 {position: absolute;top: 7vw;left: 0;width: 200%;}
+            .weekTbl .event.event03 {position: absolute;top: 1.2vw;left: 0;width: 300%;}
+            .subTxt {margin-top: 2vw; font-size: 2vw;}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header" id="header">
+            <div class="headerInner inner">
+                <h1 class="logo"><a href="#"></a></h1>
+                <ul class="menu">
+                    <li><a href="./intro.html">두부 소개</a></li>
+                    <li><a href="./spitz.html">스피츠 소개</a></li>
+                    <li><a href="./gallery01.html">두부와의 추억</a></li>
+                    <li><a href="./item.html">두부 최애</a></li>
+                    <li><a href="./daily.html" class="on">두부의 일상</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <section class="daily">
+                <div class="dailyInner inner">
+                    <div class="pageTitle">
+                        <h3><span>두부의 하루</span></h3>
+                    </div>
+                    
+                    <div class="dayBox">
+                        <div class="dayTbl">
+                            <div class="circle">
+                                <span class="line line01"></span>
+                                <span class="line line02"></span>
+                                <span class="line line03"></span>
+                                <span class="line line04"></span>
+                                <span class="line line05"></span>
+                                <span class="line line06"></span>
+                                <span class="line line07"></span>
+                                <span class="line line08"></span>
+                                <span class="line line09"></span>
+                            
+                            </div>  
+                            
+                            <span class="text text01">꿈나라</span>
+                            <span class="text text02">산책</span>
+                            <span class="text text03">밥 먹기</span>
+                            <span class="text text04">산책</span>
+                            <span class="text text05">자유시간</span>
+                            <span class="text text06">산책</span>
+                            <span class="text text07">자유시간</span>
+                            <span class="text text08">밥 먹기</span>
+                            <span class="text text09">산책&자유시간</span>
+                        </div>
+                        <div class="dailyText">
+                            <h4>산책</h4>
+                            <p>두부는 실외 배변을 하기 때문에 하루에도 몇번식 비가 오나 눈이오나 산책을 나가야합니다. 가족 구성원 모두 퇴근한 후, 출근하기 전에 산책을 시킨답니다.</p>
+                            <h4>밥먹기</h4>
+                            <p>두부는 자율 배식을 하지만 가족이 밥을 먹을때 같이 먹는 답니다.</p>
+                            <h4>자유시간</h4>
+                            <p>두부는 오전 10시부터 16시까지 집을 지키고 있는데 그동안 두부는 아침에 못 잔 잠을 자거나 창밖을 보고 자유시간을 즐긴답니다. 또 자유시간에 가족과 함께 있을때에는 깨구리와 코끼리로 터그놀이도 합니다.</p>
+                        </div>
+                    </div>
+                    <div class="week">
+                        <table class="weekTbl">
+                            <tr class="day">
+                                <td>월</td>
+                                <td>화</td>
+                                <td>수</td>
+                                <td>목</td>
+                                <td>금</td>
+                                <td><span class="blue">토</span></td>
+                                <td><span class="red">일</span></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><span class="event">엄마와 오붓한 하루</span></td>
+                                <td><span class="event event03">나와 오붓한 하루</span></td>
+                                <td><span class="event event02">엄마 아빠와 오붓한 하루</span></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <p class="subTxt">&#8251;가족의 휴무일에 따른 일주일 계획표입니다.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footerInner inner">
+                <h2 class="footerLogo"><a href="#"></a></h2>
+                <div class="footerText">
+                    <div class="info">
+                        <p>두부 주소: 대한민국 경기도 양주시 고읍동</p>
+                        <p>두부주인 : 010-1234-1234</p>
+                        <p class="copy">COPYRIGHT&copy; 심주혜 ALL Rights Reseved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+</html>

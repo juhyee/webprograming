@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/common.css">
+    <title>두부 소개</title>
+    <style>
+        .introTop {margin-top: 100px; display: flex; align-items: center; justify-content:space-between}
+        .introImg img {width: 500px;}
+        .introTxt {font-size: 2.5rem; color: #333; word-break: keep-all;}
+        .introTop .introTxt {width: 650px;}
+        .introInner>.introTxt {margin-top: 50px; font-size: 2rem;}
+        @media screen and (max-width: 1280px) {
+            .introInner {margin-top: 7.81vw; padding: 0 4.34vw !important;}
+            .introTop {margin-top: 7.81vw; display: block;}
+            .introImg img {width: 100%}
+            .introTxt {font-size: 3.91vw; text-align: center;}
+            .introTop .introTxt {margin-top: 6vw; width: 100%;}
+            .introInner>.introTxt {margin-top: 0; font-size: 3.91vw;}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header" id="header">
+            <div class="headerInner inner">
+                <h1 class="logo"><a href="#"></a></h1>
+                <ul class="menu">
+                    <li><a href="#" class="on">두부 소개</a></li>
+                    <li><a href="#">스피츠 소개</a></li>
+                    <li><a href="#">두부와의 추억</a></li>
+                    <li><a href="#">두부 최애</a></li>
+                    <li><a href="#">두부의 일상</a></li>
+                </ul>
+            </div>
+        </header>
+        
+        <main>
+            <section class="intro">
+                <div class="introInner inner">
+                    <div class="pageTitle">
+                        <h3><span>두부 소개</span></h3>
+                    </div>
+                    <div class="introTop">
+                        <div class="introImg">
+                            <img src="./img/intro.jpg">
+                        </div>
+                        <div class="introTxt">
+                            <p>
+                                이름 : 정두부 (스피츠 女)<br>
+                                <br>
+                                생년월일 : 2018.01.12<br>
+                                <br>
+                                직업 : 무직<br>
+                                <br>
+                                특기 : 온동네 강아지들에게 시비 걸기<br>
+                                <br>
+                                개인기 : 앉아, 돌아, 손, 물마시기, 밥먹기, 잠 잘자기<br>
+                                <br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="introTxt">
+                        <p>
+                            안녕하세요! 🖐🖐 우리 가족에게는 7살 된 반려견, 재페니즈 스피츠 <b>‘두부’</b>가 있습니다. 눈처럼 새하얀 털과 도톰한 발, 코에는 고소영 점도 가지고 있습니다.😃😃<br><br>
+                            두부와의 인연은 언니 친구의 소개로 닿게 되었습니다. 가정 분양을 받기 위해 찾아간 날, 어두운 방 안에 두부와 오빠 강아지 ‘바다’가 덩그러니 있었습니다. <u>그때 두부의 이름은 ‘하늘’이었습니다.</u> 그런 모습을 보고
+                            주저 없이 두부를 데리고 오게 되었습니다. 그날부터 두부는 우리 가족이 되었고, 새로운 이름 ‘두부’를 갖게 되었습니다.
+                            <br><br>
+                            <u>두부는 낯선 사람이나 다른 강아지와 어울리는 걸 어려워해요.</u> 우리 가족 외에는 경계심을 가지고 짖는 경우도 있지만, 그만큼 우리를 향한 믿음과 애정이 있다는 뜻으로 느끼고 있답니다. 오히려 그런 모습이 더 사랑스럽게 느껴질 때가 많습니다.
+                            <br><br>
+                            또한 <u>두부는 실외 배변을 고집하는 아이예요.</u> 그래서 비 오는 날이면 꼭 우비를 입히고 산책을 나가야 한답니다. 우비를 입고 터벅터벅 걷는 두부의 뒷모습은 볼 때마다 웃음을 주고, 그렇게 두부와의 하루하루가 우리
+                            가족에겐 소중한 추억이 되어가고 있습니다.
+                            <br><br>
+                            <i>사람들에게는 잘 마음을 열지 않지만, 우리에게만은 한없이 순하고 따뜻한 두부. 두부는 단순한 반려견이 아니라, 우리 가족의 막내 딸이고, 하루하루를 더 빛나게 만들어주는 소중한 존재랍니다.</i>💖💖
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <div class="footerInner inner">
+                <h2 class="footerLogo"><a href="#"></a></h2>
+                <div class="footerText">
+                    <div class="info">
+                        <p>두부 주소: 대한민국 경기도 양주시 고읍동</p>
+                        <p>두부주인 : 010-1234-1234</p>
+                        <p class="copy">COPYRIGHT&copy; 심주혜 ALL Rights Reseved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".visualSwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+    });
+</script>
+</body>
+
+</html>

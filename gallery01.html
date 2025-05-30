@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/common.css">
+    <title>두부와의 추억</title>
+    <style>
+        .galleryMenu {display: flex; justify-content: center; width: 600px; height: 60px; border-radius: 60px; background-color: #b7dbff; margin: 60px auto 0;}
+        .galleryMenu li {width: 300px; height: 60px; line-height: 60px; border-radius: 60px; text-align: center; list-style-type: none;} 
+        .galleryMenu li.on { background-color: #3399fe; }
+        .galleryMenu li a { text-decoration: none; font-size: 3.5rem; color: #fff; font-weight: bold;}
+        .galleryWrap {width: 1000px; margin: 60px auto;}
+        .galleryWrap .galleryBig {width: 100%; margin-bottom: 20px;}
+        .galleryWrap .galleryList {display: flex; justify-content: center; gap: 0 20px; list-style-type: none;}
+        .galleryWrap .galleryList li img {width: 100%; cursor: pointer;}
+        @media screen and (max-width: 1280px) {
+            .galleryMenu {width: 75.00vw; height: 9.50vw; border-radius: 7.50vw;  margin: 7.50vw auto 0;}
+            .galleryMenu li {width: 37.50vw; height: 9.50vw; line-height: 9.50vw; border-radius: 7.50vw;}
+            .galleryMenu li a {font-size: 4.98vw;}
+            .galleryWrap {width: auto; margin: 7.50vw auto;}
+            .galleryWrap .galleryBig {width: 100%; margin-bottom: 2.50vw;}
+            .galleryWrap .galleryList {gap: 0 2.50vw;}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header" id="header">
+            <div class="headerInner inner">
+                <h1 class="logo"><a href="#"></a></h1>
+                <ul class="menu">
+                    <li><a href="./intro.html">두부 소개</a></li>
+                    <li><a href="./spitz.html">스피츠 소개</a></li>
+                    <li><a href="./gallery.html" class="on">두부와의 추억</a></li>
+                    <li><a href="#">두부 최애</a></li>
+                    <li><a href="#">두부의 일상</a></li>
+                </ul>
+            </div>
+        </header>
+        
+        <main>
+            <section class="gallery">
+                <div class="galleryInner inner">
+                    <div class="pageTitle">
+                        <h3><span>두부와의 추억</span></h3>
+                    </div>
+
+                    <ul class="galleryMenu">
+                        <li class="on"><a href="./gallery01.html">어린 두부</a></li>
+                        <li><a href="./gallery02.html">성견 두부</a></li>
+                    </ul>
+                    
+                    <div class="galleryWrap">
+                        <img src="./img/gallery01.jpg" alt="" class="galleryBig">
+                        <ul class="galleryList">
+                            <li><img src="./img/gallery01.jpg" alt=""></li>
+                            <li><img src="./img/gallery02.jpg" alt=""></li>
+                            <li><img src="./img/gallery03.jpg" alt=""></li>
+                            <li><img src="./img/gallery04.jpg" alt=""></li>
+                            <li><img src="./img/gallery05.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <div class="footerInner inner">
+                <h2 class="footerLogo"><a href="#"></a></h2>
+                <div class="footerText">
+                    <div class="info">
+                        <p>두부 주소: 대한민국 경기도 양주시 고읍동</p>
+                        <p>두부주인 : 010-1234-1234</p>
+                        <p class="copy">COPYRIGHT&copy; 심주혜 ALL Rights Reseved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const bigImage = document.querySelector(".galleryBig");
+        const thumbnails = document.querySelectorAll(".galleryList img");
+
+        thumbnails.forEach(function (thumb) {
+            thumb.addEventListener("click", function () {
+                const newSrc = this.getAttribute("src");
+                bigImage.setAttribute("src", newSrc);
+            });
+        });
+    });
+
+    var swiper = new Swiper(".visualSwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/common.css">
+    <title>두부와의 최애</title>
+    <style>
+        .itemBox {display: flex;align-items: center;justify-content: space-between;margin-top: 50px;}
+        .itemBox:nth-child(even) .itemText {text-align: right;}
+        .itemBox img {width: 400px;box-shadow: 3px 3px 10px rgba(0, 0, 0, .4);}
+        .itemBox .itemText {width: 760px;}
+        .itemBox .itemText h4 {font-size: 3rem;color: #3399fe;}
+        .itemBox .itemText p {margin-top: 20px;font-size: 2.4rem;word-break: keep-all;color: #333;}
+         @media screen and (max-width: 1280px) { 
+            .itemBox {display: block; margin-top: 7.81vw; padding: 0 4.34vw;}
+            .itemBox:nth-child(odd) {display: flex; flex-wrap: wrap-reverse;}
+            .itemBox img {width: 100%; box-shadow: none;}
+            .itemBox .itemText {width: 100%;  margin-top: 7.81vw; text-align: center !important;}
+            .itemBox .itemText h4 {font-size: 5.13vw;}
+            .itemBox .itemText p {margin-top: 5.13vw; font-size: 4.13vw;}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header" id="header">
+            <div class="headerInner inner">
+                <h1 class="logo"><a href="#"></a></h1>
+                <ul class="menu">
+                    <li><a href="./intro.html">두부 소개</a></li>
+                    <li><a href="./spitz.html">스피츠 소개</a></li>
+                    <li><a href="./gallery01.html">두부와의 추억</a></li>
+                    <li><a href="./item.html" class="on">두부 최애</a></li>
+                    <li><a href="#">두부의 일상</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <section class="item">
+                <div class="itemInner inner">
+                    <div class="pageTitle">
+                        <h3><span>두부의 최애</span></h3>
+                    </div>
+                    
+                    <div class="itemBox">
+                        <img src="./img/item02.png" alt="">
+                        <div class="itemText">
+                            <h4>깨구리 인형</h4>
+                            <p>두부의 가장 최애 장남감은 언제 샀는지도 까마득한 깨구리 인형입니다. "두부야 깨구리 어딨어?"하고 물으면 바로 찾아 올 만큼 두부와 정말 오래된 장남감이자 친구랍니다! 깨구리 배안에 삑삑이가 들어 있어서 매일 밤마다 삑삑- 환청이 들린답니다.</p>
+                        </div>
+                    </div>
+                    <div class="itemBox">
+                        <div class="itemText">
+                            <h4>코끼리 인형</h4>
+                            <p>두부의 두번째 최애 장남감은 코끼리 인형입니다. 깨구리를 세탁하고 말리는 동안 가지고 놀 목적으로 사온 코끼리 인형인데 지금은 깨구리 인형이 어딨는지 모를때 가지고 노는 용도로 사용된답니다. 이 인형도 안에 삑삑이가 있어서 집 안에서는 삑삑- 소리가 끊이지 않는답니다.</p>
+                        </div>
+                        <img src="./img/item01.png" alt="">
+                    </div>
+
+                    <div class="itemBox">
+                        <img src="./img/item04.webp" alt="">
+                        <div class="itemText">
+                            <h4>고구마</h4>
+                            <p>
+                                두부는 공장에서 만든 간식을 먹으면 눈물 자국이 너무 심해져서 자연에서 나오는 식재료를 주곤한답니다.고구마는 강아지가 좋아하는 음식으로 잘 알려져 있습니다. 하지만 너무 많은 양을 먹게 되면 쉽게 살이 찌게 되므로 적당한 양을 주는 것이 좋다고 합니다. 저희 집에는 1년 내내 집에는 고구마가 있답니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="itemBox">
+                        <div class="itemText">
+                            <h4>양배추</h4>
+                            <p>삶은 양배추도 강아지가 먹어도 되는 야채 중 하나입니다. 양배추는 저칼로리의 간식, 소화기능에 도움이 된답니다. 하지만 건강에 좋은 음식이더라도 적당히 주는 것이 중요한다고 합니다. 이제는 가족이 먹는 용으로 삶았던 양배추가 두부의 최애 간신이 되었답니다.</p>
+                        </div>
+                        <img src="./img/item03.png" alt="">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footerInner inner">
+                <h2 class="footerLogo"><a href="#"></a></h2>
+                <div class="footerText">
+                    <div class="info">
+                        <p>두부 주소: 대한민국 경기도 양주시 고읍동</p>
+                        <p>두부주인 : 010-1234-1234</p>
+                        <p class="copy">COPYRIGHT&copy; 심주혜 ALL Rights Reseved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+</html>

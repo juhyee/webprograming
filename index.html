@@ -3,35 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/common.css">
     <title>두부를 소개합니다</title>
     <style>
+    .visualSwiper {width: 100%;height: 100%;}
+    .visualSwiper .swiper-slide {text-align: center;font-size: 18px;background: #444;display: flex;justify-content: center;align-items: center;}
+    .visualSwiper .swiper-slide img {display: block;width: 100%;height: 100%;object-fit: cover;}
+    .visualSwiper .visualBtn {position: absolute; top: 260px; left: 50%; width: 160px; height: 50px; margin-left: -218px; line-height: 4.5rem;border-radius: 25px; color: #3399fe; text-decoration: none; font-size: 2.4rem; font-weight: bold;background-color: #fff; border: 3px solid transparent;}  
+    .visualSwiper .visualBtn:hover {border-color: #3399fe;}
+
+    .banner {width: 100%; height: 100px; margin-top: 100px; background-color: #3399fe; }
+    .bannerInner {position: relative;height: 100%; display: flex; justify-content: center; align-items: center; margin: 0 auto; font-size: 4rem; font-weight: bold; color: #fff; text-align: center;}
+    .bannerInner::after {z-index: 0; content: ""; position: absolute; right: 250px; bottom: 0; width: 127px; height: 155px; background: url(./img/banner.png); background-size: 100%;}
+    .bannerInner::before {z-index: 0; content: ""; position: absolute; left: 250px; bottom: 0; width: 127px; height: 155px; background: url(./img/banner.png); background-size: 100%;}
+
+    .quick {margin-top: 100px;}
+    .quickMenu{margin-top: 100px; display: flex; justify-content: center; flex-wrap: wrap; gap: 50px;}
+    .quickMenu li {overflow: hidden; position: relative; position: relative; width: 300px; height: 300px; border-radius: 50%; overflow: hidden;}
+    .quickMenu li img {display: block; width: 100%; height: 100%;}
+    .quickMenu li::after {display: none; content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 100%;background-color: #000; opacity: 0.6;}
+    .quickMenu li:hover span, .quickMenu li:hover::after {display: flex;}
+    .quickMenu li:hover {border: 10px solid #b7dbff;}
+    .quickMenu li span {z-index: 2; display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; align-items: center; justify-content: center; font-size: 3rem; font-weight: bold; color: #fff;}
+
+    @media screen and (max-width: 1280px) {
+        .visualSwiper .visualBtn {top: 20.31vw; left: 50%; width: 17.31vw; height: 4.81vw; margin-left: -21.03vw; line-height: 4.41vw;border-radius: 4.81vw; font-size: 2.34vw; border-width: 0.23vw;}  
+        
+        .banner {height:11.72vw; margin-top: 7.81vw;}
+        .bannerInner {max-width: 100%; font-size:5.47vw;}
+        .bannerInner::after {right: 3.53vw; width: 11.92vw; height: 15.6vw; }
+        .bannerInner::before {left: 3.53vw; width: 11.92vw; height: 15.6vw; }
+      
+        .quick {margin-top: 7.81vw;}
+        .quickMenu{margin-top: 7.81vw; gap: 3.91vw;}
+        .quickMenu li {width: 39.06vw; height:39.06vw;}
+        .quickMenu li:hover {border: 1.78vw solid #b7dbff;}
+        .quickMenu li span {font-size: 4.17vw;}
+    }
 
     </style>
 </head>
 <body>
     <div class="wrap">
         <header class="header" id="header">
-            <h1 class="logo"><a href="#"></a></h1>
-            <ul>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-            </ul>
+            <div class="headerInner inner">
+                <h1 class="logo"><a href="#"></a></h1>
+                <ul class="menu">
+                    <li><a href="#">두부 소개</a></li>
+                    <li><a href="#">스피츠 소개</a></li>
+                    <li><a href="#">두부와의 추억</a></li>
+                    <li><a href="#">두부 최애</a></li>
+                    <li><a href="#">두부의 일상</a></li>
+                </ul>
+            </div>
         </header>
 
         <main>
             <section class="visual">
-                
+                <div class="visulInner inner">
+                    <div class="swiper visualSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./img/slide01.jpeg">
+                                <a href="#" class="visualBtn">바로가기 ></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/slide02.jpeg">
+                                <a href="#" class="visualBtn">바로가기 ></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/slide03.jpeg">
+                                <a href="#" class="visualBtn">바로가기 ></a>
+                            </div>
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
             </section>
-            <section class="banner"></section>
-            <section class="quickMenu"></section>
+            <section class="banner">
+                <div class="bannerInner inner">
+                    고읍동 골목대장 두부 보고가세요!
+                </div>
+            </section>
+            
+            <section class="quick">
+                <div class="quickInner inner">
+                    <ul class="quickMenu">
+                        <li>
+                            <a href="#"><img src="./img/quick.jpeg">
+                                <span>두부 소개</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./img/quick02.jpeg">
+                                <span>스피츠 소개</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./img/quick03.png">
+                                <span>두부와의 추억</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./img/quick04.png">
+                                <span>두부 최애</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./img/quick05.png">
+                                <span>두부의 일상</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
         </main>
         
         <footer class="footer">
-            
+            <div class="footerInner inner">
+                <h2 class="footerLogo"><a href="#"></a></h2>
+                <div class="footerText">
+                    <div class="info">
+                        <p>두부 주소: 대한민국 경기도 양주시 고읍동</p>
+                        <p>두부주인 : 010-1234-1234</p>
+                        <p class="copy">COPYRIGHT&copy; 심주혜 ALL Rights Reseved.</p>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".visualSwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+    });
+</script>
 </body>
+
 </html>
